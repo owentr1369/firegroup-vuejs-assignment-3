@@ -1,12 +1,13 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div id="app" class="vue-layout-default">
+    <h1>Dashboard</h1>
+    <router-link :to="{ name: 'Products' }">Products</router-link>
     <router-view></router-view>
   </div>
 </template>
 <script>
 export default {
-  name: "Default",
+  name: "Dashboard",
 };
 </script>
 

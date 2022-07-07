@@ -38,7 +38,7 @@
     </div>
     <div class="footer">
       <span class="footer_text">Already have an account?</span>
-      <router-link :to="{ name: 'Login' }">Login Now </router-link>
+      <router-link :to="{ name: 'Login' }">Login Now</router-link>
     </div>
   </div>
 </template>

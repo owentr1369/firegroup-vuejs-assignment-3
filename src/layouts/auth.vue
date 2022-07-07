@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="vue-layout-auth">
     <div class="auth">
-      <div class="logo">
+      <router-link :to="{ name: 'Default' }" class="logo">
         <img src="../assets/svg/Logo.svg" alt="Logo" />
-      </div>
+      </router-link>
       <div class="body">
         <router-view></router-view>
       </div>

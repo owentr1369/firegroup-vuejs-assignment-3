@@ -1,21 +1,34 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Auth from "@/middlewares/auth";
-import OnBoard from "@/middlewares/onboard";
+// import Auth from "@/middlewares/auth";
+// import OnBoard from "@/middlewares/onboard";
 Vue.use(VueRouter);
 
 const routes = [
+  // default
   {
     path: "/",
     name: "Dashboard",
-    meta: {
-      middleware: [Auth, OnBoard],
-    },
+    // meta: {
+    //   middleware: [Auth, OnBoard],
+    // },
     component: () =>
-      import(
-        /* webpackChunkName: "dashboard" */ "@/modules/dashboard/views/index.vue"
-      ),
+      import(/* webpackChunkName: "default" */ "@/layouts/dashboard.vue"),
+    children: [
+      {
+        path: "/products",
+        name: "Products",
+        // meta: {
+        //   middleware: [Auth, OnBoard],
+        // },
+        component: () =>
+          import(
+            /* webpackChunkName: "default" */ "@/modules/products/views/products.vue"
+          ),
+      },
+    ],
   },
+  // forgot password
   {
     path: "/forgot-password",
     name: "Forgot",
@@ -23,16 +36,19 @@ const routes = [
     //   middleware: [Auth, OnBoard],
     // },
     component: () =>
-      import(/* webpackChunkName: "dashboard" */ "@/layouts/forgot.vue"),
+      import(/* webpackChunkName: "auth" */ "@/layouts/forgot.vue"),
   },
+  // auth
   {
     path: "/auth",
     name: "Auth",
-    // meta: {
-    //   middleware: [Auth, OnBoard],
-    // },
+    meta: {
+      // middleware: [Auth, OnBoard],
+      layout: "auth",
+    },
     component: () =>
       import(/* webpackChunkName: "auth" */ "@/layouts/auth.vue"),
+
     children: [
       {
         path: "login",
@@ -89,9 +105,9 @@ const router = new VueRouter({
   mode: "history",
   base: "/",
   routes,
-  scrollBehavior: function (to, from, savedPosition) {
-    return { x: 0, y: 0 };
-  },
+  // scrollBehavior: function (to, from, savedPosition) {
+  //   return { x: 0, y: 0 };
+  // },
 });
 router.beforeEach(async (to, from, next) => {
   if (to.meta.middleware) {
