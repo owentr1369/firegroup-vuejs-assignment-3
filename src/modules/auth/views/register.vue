@@ -1,7 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="login">
-    <h1>Login</h1>
+    <div class="logo">
+      <h1>Login</h1>
+      <img src="" alt="" />
+    </div>
   </div>
 </template>
 
@@ -9,5 +12,5 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

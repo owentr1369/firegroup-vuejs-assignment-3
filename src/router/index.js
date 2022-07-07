@@ -1,53 +1,88 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Auth from '@/middlewares/auth'
-import OnBoard from '@/middlewares/onboard'
+import Auth from "@/middlewares/auth";
+import OnBoard from "@/middlewares/onboard";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "Dashboard",
-    meta:{
-      middleware: [Auth , OnBoard],
-      
+    meta: {
+      middleware: [Auth, OnBoard],
     },
     component: () =>
-      import(/* webpackChunkName: "dashboard" */ "@/modules/dashboard/views/index.vue"),
+      import(
+        /* webpackChunkName: "dashboard" */ "@/modules/dashboard/views/index.vue"
+      ),
   },
   {
-    path: "/articles",
-    component: () => import(/* webpackChunkName: "about" */ "@/modules/article/views/layout.vue"),
+    path: "/forgot-password",
+    name: "Forgot",
+    // meta: {
+    //   middleware: [Auth, OnBoard],
+    // },
+    component: () =>
+      import(/* webpackChunkName: "dashboard" */ "@/layouts/forgot.vue"),
+  },
+  {
+    path: "/auth",
+    name: "Auth",
+    // meta: {
+    //   middleware: [Auth, OnBoard],
+    // },
+    component: () =>
+      import(/* webpackChunkName: "auth" */ "@/layouts/auth.vue"),
     children: [
       {
-        path: "",
-        name: "Article",
+        path: "login",
+        name: "Login",
+        // meta: {
+        //   middleware: [Auth, OnBoard],
+        // },
         component: () =>
-          import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/index.vue"),
+          import(
+            /* webpackChunkName: "auth" */ "@/modules/auth/views/login.vue"
+          ),
       },
       {
-        path: "create",
-        name: "CreateArticle",
+        path: "register",
+        name: "Register",
+        // meta: {
+        //   middleware: [Auth, OnBoard],
+        // },
         component: () =>
-          import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/create.vue"),
-      },
-      {
-        path: ":id",
-        name: "DetailArticle",
-        component: () =>
-          import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/detail.vue"),
+          import(
+            /* webpackChunkName: "auth" */ "@/modules/auth/views/register.vue"
+          ),
       },
     ],
   },
-  {
-    path: "/login",
-    name: "Login",
-    meta:{
-      layout : 'auth'
-    },
-    component: () =>
-      import(/* webpackChunkName: "dashboard" */ "@/modules/auth/views/login.vue"),
-  },
+
+  // {
+  //   path: "/articles",
+  //   component: () => import(/* webpackChunkName: "about" */ "@/modules/article/views/layout.vue"),
+  //   children: [
+  //     {
+  //       path: "",
+  //       name: "Article",
+  //       component: () =>
+  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/index.vue"),
+  //     },
+  //     {
+  //       path: "create",
+  //       name: "CreateArticle",
+  //       component: () =>
+  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/create.vue"),
+  //     },
+  //     {
+  //       path: ":id",
+  //       name: "DetailArticle",
+  //       component: () =>
+  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/detail.vue"),
+  //     },
+  //   ],
+  // },
 ];
 
 const router = new VueRouter({
