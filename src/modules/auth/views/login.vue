@@ -73,6 +73,7 @@ export default {};
       display: flex;
       align-items: center;
       border-radius: $border-radius;
+      background: #fff;
       input {
         border: none;
         outline: none;
@@ -131,6 +132,7 @@ export default {};
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            background: #fff;
           }
 
           &:checked {
@@ -146,7 +148,7 @@ export default {};
               border-right: 3px solid #fff;
               border-bottom: 3px solid #fff;
               top: 8%;
-              left: 28%;
+              left: 29%;
               transform: rotate(45deg);
             }
           }
@@ -189,13 +191,38 @@ export default {};
   }
   .seperator {
     margin-bottom: 16px;
+    text-align: center;
+
     span {
+      position: relative;
       font-family: "Poppins";
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 21px;
       color: #4f4f4f;
+      width: fit-content;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 148%;
+        background-color: #ebebf0;
+        left: 102%;
+        top: 50%;
+        z-index: 0;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 148%;
+        background-color: #ebebf0;
+        right: 102%;
+        top: 50%;
+        z-index: 0;
+      }
     }
   }
   .other-methods {
