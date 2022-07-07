@@ -5,7 +5,7 @@
     <form>
       <div class="email">
         <img src="@/assets/svg/email.svg" alt="" class="email_icon" />
-        <input type="text" id="email" placeholder="Your email" />
+        <input type="email" id="email" placeholder="Your email" />
       </div>
       <div class="password">
         <img src="@/assets/svg/password.svg" alt="" class="password_icon" />
