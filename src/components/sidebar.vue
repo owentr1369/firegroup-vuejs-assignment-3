@@ -25,9 +25,15 @@
       </nav>
     </div>
     <div class="sidebar-bottom">
-      <img src="@/assets/svg/headset.svg" alt="" />
-      <img src="@/assets/svg/chat.svg" alt="" />
-      <img src="@/assets/svg/gribblock.svg" alt="" />
+      <router-link :to="{ name: 'Call' }">
+        <img src="@/assets/svg/headset.svg" alt="" />
+      </router-link>
+      <router-link :to="{ name: 'Chat' }">
+        <img src="@/assets/svg/chat.svg" alt="" />
+      </router-link>
+      <router-link :to="{ name: 'App' }">
+        <img src="@/assets/svg/gribblock.svg" alt="" />
+      </router-link>
     </div>
   </div>
 </template> 
@@ -44,5 +50,85 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #f7f8fa;
+  &-top {
+    width: 100%;
+    .logo {
+      width: 100%;
+      padding-top: 13px;
+      padding-left: 15px;
+      margin-bottom: 42px;
+    }
+    .menu {
+      display: block;
+      width: 100%;
+      &_item {
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.1s ease-in;
+        &-icon {
+          margin-right: 12px;
+          // svg {
+          //   // .path {
+          //   //   fill: ;
+          //   // }
+          // }
+        }
+        &-text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #4f4f4f;
+        }
+        &:hover {
+          background: #ebf1ff;
+          & > .menu_item-text {
+            color: $main-color;
+          }
+          &::after {
+            content: "";
+            background: $main-color;
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            border-radius: 0 6px 6px 0;
+            left: 0;
+            top: 0;
+            transition: all 0.1s ease-in;
+          }
+        }
+        &.router-link-exact-active {
+          background: #ebf1ff;
+          &::after {
+            content: "";
+            background: $main-color;
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            border-radius: 0 6px 6px 0;
+            left: 0;
+            top: 0;
+          }
+          .menu_item-text {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    width: 200px;
+    align-self: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #f3f3f3;
+  }
 }
 </style>

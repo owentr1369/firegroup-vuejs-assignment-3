@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="vue-layout-default">
-    <sidebar></sidebar>
-    <router-view></router-view>
+    <div class="home">
+      <sidebar></sidebar>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script>
@@ -13,4 +15,9 @@ export default {
 </script>
 
 <style lang="scss">
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 </style>
