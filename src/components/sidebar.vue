@@ -51,6 +51,7 @@ export default {};
   flex-direction: column;
   justify-content: space-between;
   background: #f7f8fa;
+  border-right: 1px solid #e2e2e2;
   &-top {
     width: 100%;
     .logo {
