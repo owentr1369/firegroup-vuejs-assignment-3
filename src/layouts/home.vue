@@ -4,7 +4,7 @@
       <sidebar></sidebar>
       <div class="body">
         <submenu></submenu>
-        <router-view></router-view>
+        <router-view class="content"></router-view>
       </div>
     </div>
   </div>
@@ -25,6 +25,11 @@ export default {
   display: flex;
   .body {
     width: calc(100% - 230px);
+    .content {
+      padding-left: 55px;
+      padding-right: 55px;
+      margin-top: 30px;
+    }
   }
 }
 </style>
