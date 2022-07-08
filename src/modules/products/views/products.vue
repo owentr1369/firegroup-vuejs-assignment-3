@@ -7,7 +7,7 @@
         <img src="@/assets/svg/plus.svg" alt="" />
         <span>Add new product</span>
       </button>
-    </div>  
+    </div>
     <div class="products_actions">
       <div class="searchbar">
         <img src="@/assets/svg/search.svg" class="searchbar_icon"></img>
@@ -15,29 +15,41 @@
       </div>
       <div class="filters">
         <div class="filters_item">
-          <span>Status</span>
-          <img src="@/assets/svg/arrow-down-filled.svg" alt="">
+          <select name="" id="status">
+            <option value="">Status</option>
+          </select>
+          <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
         </div>
         <div class="filters_item">
-          <span>Quantity</span>
-          <img src="@/assets/svg/arrow-down-filled.svg" alt="">
+          <select name="" id="">
+            <option value="">Quantity</option>
+          </select>
+          <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
         </div>
         <div class="filters_item">
-          <span>Shipping</span>
-          <img src="@/assets/svg/arrow-down-filled.svg" alt="">
+          <select name="" id="">
+            <option value="">Shipping</option>
+          </select>
+          <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
         </div>
         <div class="filters_item">
-          <span>Profile</span>
-          <img src="@/assets/svg/arrow-down-filled.svg" alt="">
+          <select name="" id="">
+            <option value="">Profile</option>
+          </select>
+          <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
         </div>
         <div class="filters_item">
-          <span>Ready to push</span>
-          <img src="@/assets/svg/arrow-down-filled.svg" alt="">
+          <select name="" id="">
+            <option value="">Ready to push</option>
+          </select>
+          <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
         </div>
       </div>
       <div class="sort">
         <img src="@/assets/svg/sort.svg" alt="">
-        <span>Sort</span>
+        <select name="" id="">
+          <option value="">Sort</option>
+        </select>
       </div>
     </div>
     <products-table></products-table>
@@ -57,17 +69,20 @@ export default {
 
 .products {
   width: 100%;
+  background: #f7f8fa;
   &_head {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
     &-title {
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
       color: #252627;
     }
+
     &-btn {
       font-weight: 600;
       font-size: 14px;
@@ -77,8 +92,98 @@ export default {
       padding: 14.5px 12px;
       border: none;
       border-radius: 4px;
+
       img {
         margin-right: 8px;
+      }
+    }
+  }
+
+  &_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 26px;
+    .searchbar {
+      width: 36%;
+      display: flex;
+      align-items: center;
+      border: 1px solid #e5e8ef;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fff;
+
+      &_icon {
+        margin-top: 9px;
+        margin-bottom: 9px;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+    .filters {
+      display: flex;
+      border-radius: 4px;
+      border: 1px solid #e5e8ef;
+      overflow: hidden;
+      background: #fff;
+      &_item {
+        position: relative;
+        border-right: 1px solid #e5e8ef;
+
+        &:last-child {
+          border: none;
+        }
+        select {
+          outline: none;
+          border: none;
+          appearance: none;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 14px;
+          padding-right: 27px;
+          background: transparent;
+          cursor: pointer;
+          z-index: 2;
+          &:last-child {
+            padding-right: 24px;
+          }
+        }
+        img {
+          position: absolute;
+          right: 11px;
+          top: 52%;
+          transform: translateY(-50%);
+          z-index: 0;
+        }
+      }
+    }
+    .sort {
+      position: relative;
+      border: 1px solid #e5e8ef;
+      border-radius: 4px;
+      background: #fff;
+      z-index: 2;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+      select {
+        appearance: none;
+        border: none;
+        outline: none;
+        padding: 12px 15px 12px 31px;
+        cursor: pointer;
       }
     }
   }

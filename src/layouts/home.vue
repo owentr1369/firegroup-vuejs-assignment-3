@@ -28,7 +28,7 @@ export default {
     .content {
       padding-left: 55px;
       padding-right: 55px;
-      margin-top: 30px;
+      padding-top: 30px;
     }
   }
 }
