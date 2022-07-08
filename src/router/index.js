@@ -8,22 +8,55 @@ const routes = [
   // default
   {
     path: "/",
-    name: "Dashboard",
+    name: "Home",
     // meta: {
     //   middleware: [Auth, OnBoard],
     // },
     component: () =>
-      import(/* webpackChunkName: "default" */ "@/layouts/dashboard.vue"),
+      import(/* webpackChunkName: "default" */ "@/layouts/home.vue"),
     children: [
       {
-        path: "/products",
+        path: "dashboard",
+        name: "Dashboard",
+        // meta: {
+        // middleware: [Auth, OnBoard],
+        // },
+        component: () =>
+          import(
+            /* webpackChunkName: "default" */ "@/modules/dashboard/views/dashboard.vue"
+          ),
+      },
+      {
+        path: "products",
         name: "Products",
         // meta: {
-        //   middleware: [Auth, OnBoard],
+        // middleware: [Auth, OnBoard],
         // },
         component: () =>
           import(
             /* webpackChunkName: "default" */ "@/modules/products/views/products.vue"
+          ),
+      },
+      {
+        path: "stores",
+        name: "Stores",
+        // meta: {
+        // middleware: [Auth, OnBoard],
+        // },
+        component: () =>
+          import(
+            /* webpackChunkName: "default" */ "@/modules/stores/views/stores.vue"
+          ),
+      },
+      {
+        path: "settings",
+        name: "Settings",
+        // meta: {
+        // middleware: [Auth, OnBoard],
+        // },
+        component: () =>
+          import(
+            /* webpackChunkName: "default" */ "@/modules/settings/views/settings.vue"
           ),
       },
     ],
@@ -53,9 +86,9 @@ const routes = [
       {
         path: "login",
         name: "Login",
-        // meta: {
-        //   middleware: [Auth, OnBoard],
-        // },
+        meta: {
+          // middleware: [Auth, OnBoard],
+        },
         component: () =>
           import(
             /* webpackChunkName: "auth" */ "@/modules/auth/views/login.vue"

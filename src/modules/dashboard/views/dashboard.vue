@@ -1,28 +1,18 @@
 <template>
-  <div>
-    <div v-if="is_loading">loading ...</div>
-    <div v-else>
-      <template v-if="is_error">
-        <div>error</div>
-      </template>
-      <template v-else>
-        <div>
-          {{ user }}
-        </div>
-      </template>
-    </div>
+  <div class="dashboard">
+    <h1>Dashboard</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: "Dashboard",
-  data() {
-    return {
-      is_loading: true,
-      is_error: false,
-    };
-  },
+  // data() {
+  //   return {
+  //     is_loading: true,
+  //     is_error: false,
+  //   };
+  // },
   // computed:{
   //   ...mapGetters({
   //     isLogged : 'auth/isLogged',
