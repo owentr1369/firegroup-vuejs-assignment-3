@@ -9,8 +9,13 @@
       </div>
       <div class="password">
         <img src="@/assets/svg/password.svg" alt="" class="password_icon" />
-        <input type="password" name="" id="password" placeholder="Password" />
-        <button>SHOW</button>
+        <input
+          :type="isShow ? 'text' : 'password'"
+          name=""
+          id="password"
+          placeholder="Password"
+        />
+        <button @click.prevent="togglePassword">SHOW</button>
       </div>
       <div class="options">
         <div class="options_remember">
@@ -46,7 +51,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isShow: false,
+    };
+  },
+  methods: {
+    togglePassword() {
+      this.isShow = !this.isShow;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
