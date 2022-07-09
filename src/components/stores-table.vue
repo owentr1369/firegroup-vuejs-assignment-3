@@ -13,7 +13,7 @@
         <tr>
           <td class="td-name">
             <div>
-              <img src="@/assets/png/store-1.png" alt="" />
+              <img src="@/assets/png/store-1.png" />
               <div class="info">
                 <h2>Baobashop</h2>
                 <p>phuongnnguyen@gmail.com</p>
@@ -36,16 +36,61 @@
         <tr>
           <td class="td-name">
             <div>
-              <img src="@/assets/png/store-1.png" alt="" />
+              <img src="@/assets/png/store-2.png" />
               <div class="info">
-                <h2>Baobashop</h2>
+                <h2>Coffee Pet shop</h2>
                 <p>phuongnnguyen@gmail.com</p>
               </div>
             </div>
           </td>
           <td class="td-status">
-            <span v-if="isLive">Live</span>
-            <span v-else class="disconnected">Disconnected</span>
+            <span>Live</span>
+          </td>
+          <td class="td-products">560</td>
+          <td class="td-actions">
+            <div>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+              <button>Detail</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-name">
+            <div>
+              <img src="@/assets/png/store-3.png" />
+              <div class="info">
+                <h2>X-Deal fashion</h2>
+                <p>phuongnnguyen@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td class="td-status">
+            <span>Live</span>
+          </td>
+          <td class="td-products">560</td>
+          <td class="td-actions">
+            <div>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+              <button>Detail</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-name">
+            <div>
+              <img src="@/assets/png/store-4.png" />
+              <div class="info">
+                <h2>D.Mix Store</h2>
+                <p>phuongnnguyen@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td class="td-status">
+            <span class="disconnected">Disconnected</span>
           </td>
           <td class="td-products">560</td>
           <td class="td-actions">
@@ -63,7 +108,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style lang="scss" scoped>
