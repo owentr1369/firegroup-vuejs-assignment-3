@@ -74,6 +74,516 @@
             </div>
           </td>
         </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-checkbox">
+            <input type="checkbox" name="" id="" />
+          </td>
+          <td class="td-product">
+            <img src="@/assets/Rectangle 2727.png" alt="" />
+            <div class="product-info">
+              <h3 class="product-info_name">
+                Imwete Anti Blue Light Computer...
+              </h3>
+              <p class="product-info_id">Shopify ID: 343972834378</p>
+            </div>
+          </td>
+          <td class="td-shopify">
+            <div>
+              <img src="@/assets/svg/green-dot.svg" alt="" />
+              <span>Active</span>
+            </div>
+          </td>
+          <td class="td-quantity">
+            <span
+              ><strong>2816</strong> in stock for
+              <strong>3</strong> variants</span
+            >
+          </td>
+          <td class="td-options">2</td>
+          <td class="td-profile">
+            <div>
+              <select name="" id="">
+                <option value="">Global selling</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-shipping">
+            <div>
+              <select name="" id="">
+                <option value="">Shipping 1</option>
+              </select>
+              <img src="@/assets/svg/arrow-down-filled.svg" alt="" />
+            </div>
+          </td>
+          <td class="td-actions">
+            <div>
+              <button>Push to Etsy</button>
+              <button class="more">
+                <img src="@/assets/svg/3-dots.svg" alt="" />
+              </button>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -87,12 +597,18 @@ export default {};
 @import "@/styles/scss/index.scss";
 
 .products-table {
+  height: calc(100vh - 218px);
   width: 100%;
+  overflow: auto;
   table {
+    overflow-y: auto;
     background: #fff;
     border-collapse: collapse;
     width: 100%;
+    border: 1px solid #e5e8ef;
     thead {
+      height: 80px;
+      width: inherit;
       tr {
         border-bottom: 1px solid #e5e8ef;
         th {
@@ -103,7 +619,6 @@ export default {};
           font-size: 14px;
           line-height: 16px;
           color: #828282;
-
           &.th-checkbox {
             padding-left: 25px;
             input[type="checkbox"] {
@@ -177,8 +692,16 @@ export default {};
       }
     }
     tbody {
+      margin-top: 80px;
       tr {
         border-bottom: 1px solid #e5e8ef;
+        &:first-child {
+          padding-top: 80px;
+        }
+        &:hover {
+          background: #f7f8fa;
+          cursor: pointer;
+        }
         td {
           padding-top: 20px;
           padding-bottom: 20px;
@@ -295,6 +818,7 @@ export default {};
                 background: transparent;
                 z-index: 2;
                 cursor: pointer;
+                background: #fff;
               }
               img {
                 position: absolute;
@@ -321,6 +845,7 @@ export default {};
                 background: transparent;
                 z-index: 2;
                 cursor: pointer;
+                background: #fff;
               }
               img {
                 position: absolute;
