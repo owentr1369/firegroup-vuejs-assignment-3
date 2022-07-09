@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div id="app" class="vue-layout-auth">
     <div class="auth">

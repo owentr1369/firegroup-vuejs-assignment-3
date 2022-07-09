@@ -5,7 +5,12 @@
     <form>
       <div class="email">
         <img src="@/assets/svg/email.svg" alt="" class="email_icon" />
-        <input type="email" id="email" placeholder="Your email" />
+        <input
+          type="email"
+          id="email"
+          placeholder="Your email"
+          v-model="email"
+        />
       </div>
       <div class="password">
         <img src="@/assets/svg/password.svg" alt="" class="password_icon" />
@@ -14,19 +19,23 @@
           name=""
           id="password"
           placeholder="Password"
+          v-model="password"
         />
-        <button @click.prevent="togglePassword">SHOW</button>
+        <button @click.prevent="togglePassword">
+          <span v-if="!isShow">SHOW</span>
+          <span v-else>HIDE</span>
+        </button>
       </div>
       <div class="options">
         <div class="options_remember">
-          <input type="checkbox" name="" id="remember" />
+          <input type="checkbox" name="" id="remember" v-model="rememberMe" />
           <label for="remember">Remember Me</label>
         </div>
         <div class="options_forgot">
           <router-link :to="{ name: 'Forgot' }">Forgot password?</router-link>
         </div>
       </div>
-      <button>Login</button>
+      <button @click.prevent="submit">Login</button>
     </form>
     <div class="seperator">
       <span>Or login with</span>
@@ -55,11 +64,27 @@ export default {
   data() {
     return {
       isShow: false,
+      email: "",
+      password: "",
+      rememberMe: false,
     };
   },
   methods: {
     togglePassword() {
       this.isShow = !this.isShow;
+    },
+    submit() {
+      console.log("this.email :>> ", this.email);
+      console.log("this.password :>> ", this.password);
+      console.log("this.rememberMe :>> ", this.rememberMe);
+    },
+  },
+  watch: {
+    email() {
+      console.log("this.email :>> ", this.email);
+    },
+    password() {
+      console.log("this.password :>> ", this.password);
     },
   },
 };
@@ -203,6 +228,7 @@ export default {
       background: $main-color;
       color: #fff;
       margin-bottom: 23px;
+      cursor: pointer;
     }
   }
   .seperator {
@@ -251,11 +277,6 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
       width: 168px;
       border: 1px solid #ebebf0;
       background: #fff;
@@ -265,6 +286,7 @@ export default {
       font-weight: 400;
       font-size: 12px;
       line-height: 18px;
+      cursor: pointer;
     }
     .google {
       img {
