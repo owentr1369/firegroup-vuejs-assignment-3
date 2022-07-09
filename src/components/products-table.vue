@@ -597,7 +597,7 @@ export default {};
 @import "@/styles/scss/index.scss";
 
 .products-table {
-  height: calc(100vh - 218px);
+  height: calc(100vh - 219px);
   width: 100%;
   overflow: auto;
   table {

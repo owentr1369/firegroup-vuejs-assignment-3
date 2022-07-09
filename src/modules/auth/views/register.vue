@@ -5,18 +5,37 @@
     <form>
       <div class="fullname">
         <img src="@/assets/svg/user.svg" alt="" class="email_icon" />
-        <input type="text" id="email" placeholder="Full Name" />
+        <input
+          v-model="fullName"
+          type="text"
+          id="email"
+          placeholder="Full Name"
+        />
       </div>
       <div class="email">
         <img src="@/assets/svg/email.svg" alt="" class="email_icon" />
-        <input type="email" id="email" placeholder="Your email" />
+        <input
+          v-model="email"
+          type="email"
+          id="email"
+          placeholder="Your email"
+        />
       </div>
       <div class="password">
         <img src="@/assets/svg/password.svg" alt="" class="password_icon" />
-        <input type="password" name="" id="password" placeholder="Password" />
-        <button>SHOW</button>
+        <input
+          :type="isShow ? 'text' : 'password'"
+          name=""
+          id="password"
+          placeholder="Password"
+          v-model="password"
+        />
+        <button @click.prevent="togglePassword">
+          <span v-if="!isShow">SHOW</span>
+          <span v-else>HIDE</span>
+        </button>
       </div>
-      <button>Create Free Account</button>
+      <button @click.prevent="submit">Create Free Account</button>
       <span class="term">
         By providing your email, you are agreeing to our
         <a href="#">terms of service.</a>
@@ -44,7 +63,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isShow: false,
+      fullName: "",
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    togglePassword() {
+      this.isShow = !this.isShow;
+    },
+    submit() {
+      console.log("this.email :>> ", this.email);
+      console.log("this.password :>> ", this.password);
+      console.log("this.fullName :>> ", this.fullName);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
