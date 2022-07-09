@@ -92,6 +92,7 @@ export default {
       padding: 14.5px 12px;
       border: none;
       border-radius: 4px;
+      cursor: pointer;
 
       img {
         margin-right: 8px;

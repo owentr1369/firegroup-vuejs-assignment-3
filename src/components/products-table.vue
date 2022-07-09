@@ -875,7 +875,7 @@ export default {};
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  border-color: #e5e8ef;
+                  border: 1px solid#e5e8ef;
                   padding: 8px 14px;
                 }
               }
