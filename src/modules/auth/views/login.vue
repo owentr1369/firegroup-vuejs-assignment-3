@@ -35,7 +35,7 @@
           <router-link :to="{ name: 'Forgot' }">Forgot password?</router-link>
         </div>
       </div>
-      <button @click.prevent="submit">Login</button>
+      <button @click.prevent="login">Login</button>
     </form>
     <div class="seperator">
       <span>Or login with</span>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -73,18 +74,28 @@ export default {
     togglePassword() {
       this.isShow = !this.isShow;
     },
-    submit() {
-      console.log("this.email :>> ", this.email);
-      console.log("this.password :>> ", this.password);
-      console.log("this.rememberMe :>> ", this.rememberMe);
-    },
-  },
-  watch: {
-    email() {
-      console.log("this.email :>> ", this.email);
-    },
-    password() {
-      console.log("this.password :>> ", this.password);
+    async login() {
+      console.log("object :>> ", {
+        email: this.email,
+        password: this.password,
+        timezone: new Date(),
+      });
+
+      const { data } = await axios
+        .post("https://sohead-api-dev.socialhead.dev/api/app/sign-in", {
+          email: this.email,
+          password: this.password,
+          timezone: new Date(),
+        })
+        .then(({ data }) => data);
+
+      console.log("data :>> ", data.token);
+
+      let now = new Date();
+      now.setDate(now.getDate() + 1);
+
+      document.cookie = "userToken=" + data.token + ";";
+      document.cookie = "expires=" + now.toUTCString() + ";";
     },
   },
 };

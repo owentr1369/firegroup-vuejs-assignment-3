@@ -8,7 +8,7 @@
         <input
           v-model="fullName"
           type="text"
-          id="email"
+          id="fullName"
           placeholder="Full Name"
         />
       </div>
@@ -35,7 +35,7 @@
           <span v-else>HIDE</span>
         </button>
       </div>
-      <button @click.prevent="submit">Create Free Account</button>
+      <button @click.prevent="register">Create Free Account</button>
       <span class="term">
         By providing your email, you are agreeing to our
         <a href="#">terms of service.</a>
@@ -63,6 +63,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -76,10 +77,27 @@ export default {
     togglePassword() {
       this.isShow = !this.isShow;
     },
-    submit() {
-      console.log("this.email :>> ", this.email);
-      console.log("this.password :>> ", this.password);
-      console.log("this.fullName :>> ", this.fullName);
+    // register() {
+    //   console.log("this.fullName :>> ", this.fullName);
+    //   console.log("this.email :>> ", this.email);
+    //   console.log("this.password :>> ", this.password);
+    // },
+    async register() {
+      console.log("object :>> ", {
+        email: this.email,
+        password: this.password,
+        timezone: new Date(),
+        name: this.fullName,
+      });
+      const { data } = await axios
+        .post("https://sohead-api-dev.socialhead.dev/api/app/sign-up", {
+          email: this.email,
+          password: this.password,
+          timezone: new Date(),
+          name: this.fullName,
+        })
+        .then(({ data }) => data);
+      console.log("data :>> ", data.token);
     },
   },
 };

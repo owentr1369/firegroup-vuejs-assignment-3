@@ -1,23 +1,29 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import axios from "axios";
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-import auth from './auth'
 export default new Vuex.Store({
   state: {
-    
+    user: [],
   },
-  getters: {
-    
-  },
+  getters: {},
   mutations: {
-    
+    setUser(state, payload) {
+      state.user = payload;
+    },
   },
   actions: {
-    
+    fetchUser({ commit }) {
+      axios
+        .get("https://sohead-api-dev.socialhead.dev/api/app/user")
+        .then((res) => res.data)
+        .then((user) => {
+          commit("setUser", user);
+          console.log("user :>> ", user);
+        });
+    },
   },
-  modules: {
-    auth
-  }
-})
+  modules: {},
+});

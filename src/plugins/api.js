@@ -7,10 +7,10 @@ const api = {
           params,
           cancelToken: cancel_token ? cancel_token.token : null,
         })
-        .then(res => {
+        .then((res) => {
           resolve(res.data);
         })
-        .catch(err => {
+        .catch((err) => {
           if (axios.isCancel(err)) {
             return reject("canceled");
           }
@@ -27,12 +27,12 @@ const api = {
 };
 
 export default {
-  getUser (payload) {
-    let { id } = payload 
-    return api.get(`/use/${id}`, { id })
+  getUser(payload) {
+    let { id } = payload;
+    return api.get(`/use/${id}`, { id });
   },
-  getListUser(payload){
-    let { page = 1, sort ='A-Z' , search  = 'name' } = payload 
-    return api.get('/users',  { page , sort , search })
-  }
+  getListUser(payload) {
+    let { page = 1, sort = "A-Z", search = "name" } = payload;
+    return api.get("/users", { page, sort, search });
+  },
 };

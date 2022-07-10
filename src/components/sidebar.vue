@@ -88,6 +88,10 @@ export default {};
         }
         &:hover {
           background: #ebf1ff;
+          img {
+            filter: invert(58%) sepia(38%) saturate(4383%) hue-rotate(200deg)
+              brightness(92%) contrast(95%);
+          }
           & > .menu_item-text {
             color: $main-color;
           }
@@ -105,6 +109,10 @@ export default {};
         }
         &.router-link-exact-active {
           background: #ebf1ff;
+          img {
+            filter: invert(58%) sepia(38%) saturate(4383%) hue-rotate(200deg)
+              brightness(92%) contrast(95%);
+          }
           &::after {
             content: "";
             background: $main-color;

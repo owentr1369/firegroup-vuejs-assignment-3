@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie'
-export default Cookies
+let cookieData = document.cookie;
+console.log("cookieData :>> ", cookieData);
 
-
+export default cookieData;

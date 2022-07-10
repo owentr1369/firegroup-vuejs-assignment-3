@@ -6,8 +6,6 @@ let axios = instance.create({
     return status >= 200 && status < 400;
   },
 });
-axios.CancelToken = instance.CancelToken;
-axios.isCancel = instance.isCancel;
 axios.interceptors.request.use(function (config) {
   let token = localStorage.get("access_token");
   if (token) {
@@ -24,6 +22,6 @@ axios.interceptors.response.use(
       store.dispatch("auth/logout");
     }
     return Promise.reject(error.response);
-  },
+  }
 );
 export default axios;
