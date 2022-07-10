@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import cookieData from "@/plugins/cookie";
+import { getCookie } from "@/plugins/cookie";
+("@/plugins/cookie");
 
 export default async function ({ next, to }) {
-  if (!cookieData) {
+  let tokenExist = !!getCookie("userToken");
+  console.log("tokenExist :>> ", tokenExist);
+  if (!tokenExist) {
     next({ name: "Login" });
     return false;
   }

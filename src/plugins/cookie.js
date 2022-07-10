@@ -1,4 +1,5 @@
-let cookieData = document.cookie;
-console.log("cookieData :>> ", cookieData);
-
-export default cookieData;
+export const getCookie = (name) => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+};
