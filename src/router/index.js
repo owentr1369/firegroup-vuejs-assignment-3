@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// import Auth from "@/middlewares/auth";
+import Auth from "@/middlewares/auth";
 // import OnBoard from "@/middlewares/onboard";
 Vue.use(VueRouter);
 
@@ -9,18 +9,18 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    // meta: {
-    //   middleware: [Auth, OnBoard],
-    // },
+    meta: {
+      middleware: [Auth],
+    },
     component: () =>
       import(/* webpackChunkName: "default" */ "@/layouts/home.vue"),
     children: [
       {
         path: "dashboard",
         name: "Dashboard",
-        // meta: {
-        // middleware: [Auth, OnBoard],
-        // },
+        meta: {
+          middleware: [Auth],
+        },
         component: () =>
           import(
             /* webpackChunkName: "default" */ "@/modules/dashboard/views/dashboard.vue"
@@ -29,9 +29,9 @@ const routes = [
       {
         path: "products",
         name: "Products",
-        // meta: {
-        // middleware: [Auth, OnBoard],
-        // },
+        meta: {
+          middleware: [Auth],
+        },
         component: () =>
           import(
             /* webpackChunkName: "default" */ "@/modules/products/views/products.vue"
@@ -40,9 +40,9 @@ const routes = [
       {
         path: "stores",
         name: "Stores",
-        // meta: {
-        // middleware: [Auth, OnBoard],
-        // },
+        meta: {
+          middleware: [Auth],
+        },
         component: () =>
           import(
             /* webpackChunkName: "default" */ "@/modules/stores/views/stores.vue"
@@ -51,9 +51,9 @@ const routes = [
       {
         path: "settings",
         name: "Settings",
-        // meta: {
-        // middleware: [Auth, OnBoard],
-        // },
+        meta: {
+          middleware: [Auth],
+        },
         component: () =>
           import(
             /* webpackChunkName: "default" */ "@/modules/settings/views/settings.vue"
@@ -97,9 +97,6 @@ const routes = [
       {
         path: "register",
         name: "Register",
-        // meta: {
-        //   middleware: [Auth, OnBoard],
-        // },
         component: () =>
           import(
             /* webpackChunkName: "auth" */ "@/modules/auth/views/register.vue"

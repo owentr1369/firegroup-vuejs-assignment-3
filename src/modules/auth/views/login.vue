@@ -75,11 +75,11 @@ export default {
       this.isShow = !this.isShow;
     },
     async login() {
-      console.log("object :>> ", {
-        email: this.email,
-        password: this.password,
-        timezone: new Date(),
-      });
+      // console.log("object :>> ", {
+      //   email: this.email,
+      //   password: this.password,
+      //   timezone: new Date(),
+      // });
 
       const { data } = await axios
         .post("https://sohead-api-dev.socialhead.dev/api/app/sign-in", {
@@ -87,9 +87,14 @@ export default {
           password: this.password,
           timezone: new Date(),
         })
-        .then(({ data }) => data);
 
-      console.log("data :>> ", data.token);
+        .then(({ data }) => data)
+        .catch((err) => {
+          console.log();
+          if (err.response.status === 422) {
+            return alert("Sai tài khoản hoặc mật khẩu");
+          }
+        });
 
       let now = new Date();
       now.setDate(now.getDate() + 1);

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
-let isAuthenticated = true;
+import cookieData from "@/plugins/cookie";
+
 export default async function ({ next, to }) {
-  if (!isAuthenticated) {
+  if (!cookieData) {
     next({ name: "Login" });
     return false;
   }
