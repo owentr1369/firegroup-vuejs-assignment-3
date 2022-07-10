@@ -78,19 +78,12 @@ export default {
       this.isShow = !this.isShow;
     },
     async login() {
-      // console.log("object :>> ", {
-      //   email: this.email,
-      //   password: this.password,
-      //   timezone: new Date(),
-      // });
-
       const { data } = await axios
         .post("https://sohead-api-dev.socialhead.dev/api/app/sign-in", {
           email: this.email,
           password: this.password,
           timezone: new Date(),
         })
-
         .then(({ data }) => data)
         .catch((err) => {
           console.log();
@@ -101,9 +94,9 @@ export default {
 
       let now = new Date();
       now.setDate(now.getDate() + 1);
-
-      document.cookie = "userToken=" + data.token + ";";
-      document.cookie = "expires=" + now.toUTCString() + ";";
+      document.cookie = `userToken=${
+        data.token
+      }; expires= ${now.toUTCString()}`;
 
       router.push("/products");
     },
