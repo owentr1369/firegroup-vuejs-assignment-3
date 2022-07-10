@@ -8,22 +8,26 @@ export default new Vuex.Store({
   state: {
     user: [],
   },
-  getters: {},
+  getters: {
+    getUser: (state) => state.user,
+  },
   mutations: {
-    setUser(state, payload) {
-      state.user = payload;
+    SET_USER(state, user) {
+      state.user = user;
     },
   },
   actions: {
-    fetchUser({ commit }) {
-      axios
-        .get("https://sohead-api-dev.socialhead.dev/api/app/user")
-        .then((res) => res.data)
-        .then((user) => {
-          commit("setUser", user);
-          console.log("user :>> ", user);
-        });
+    async fetchUser({ commit }) {
+      try {
+        const data = await axios.get(
+          "https://sohead-api-dev.socialhead.dev/api/app/user"
+        );
+        commit("SET_USER", data.data);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
+
   modules: {},
 });

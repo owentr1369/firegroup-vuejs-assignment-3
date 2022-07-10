@@ -64,7 +64,7 @@ const routes = [
   // forgot password
   {
     path: "/forgot-password",
-    name: "Forgot",
+    name: "Forgot Password",
     // meta: {
     //   middleware: [Auth, OnBoard],
     // },
@@ -104,40 +104,12 @@ const routes = [
       },
     ],
   },
-
-  // {
-  //   path: "/articles",
-  //   component: () => import(/* webpackChunkName: "about" */ "@/modules/article/views/layout.vue"),
-  //   children: [
-  //     {
-  //       path: "",
-  //       name: "Article",
-  //       component: () =>
-  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/index.vue"),
-  //     },
-  //     {
-  //       path: "create",
-  //       name: "CreateArticle",
-  //       component: () =>
-  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/create.vue"),
-  //     },
-  //     {
-  //       path: ":id",
-  //       name: "DetailArticle",
-  //       component: () =>
-  //         import(/* webpackChunkName: "dashboard" */ "@/modules/article/views/detail.vue"),
-  //     },
-  //   ],
-  // },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: "/",
   routes,
-  // scrollBehavior: function (to, from, savedPosition) {
-  //   return { x: 0, y: 0 };
-  // },
 });
 router.beforeEach(async (to, from, next) => {
   if (to.meta.middleware) {
@@ -155,6 +127,10 @@ router.beforeEach(async (to, from, next) => {
       return;
     }
   }
+  next();
+});
+router.beforeEach((to, from, next) => {
+  document.title = `Logoipsum | ${to.name}`;
   next();
 });
 

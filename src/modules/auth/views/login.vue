@@ -32,7 +32,9 @@
           <label for="remember">Remember Me</label>
         </div>
         <div class="options_forgot">
-          <router-link :to="{ name: 'Forgot' }">Forgot password?</router-link>
+          <router-link :to="{ name: 'Forgot Password' }"
+            >Forgot password?</router-link
+          >
         </div>
       </div>
       <button @click.prevent="login">Login</button>
@@ -61,6 +63,7 @@
 
 <script>
 import axios from "axios";
+import router from "@/router";
 export default {
   data() {
     return {
@@ -92,7 +95,7 @@ export default {
         .catch((err) => {
           console.log();
           if (err.response.status === 422) {
-            return alert("Sai tài khoản hoặc mật khẩu");
+            return alert("Email address or password incorrect!");
           }
         });
 
@@ -101,6 +104,8 @@ export default {
 
       document.cookie = "userToken=" + data.token + ";";
       document.cookie = "expires=" + now.toUTCString() + ";";
+
+      router.push("/products");
     },
   },
 };

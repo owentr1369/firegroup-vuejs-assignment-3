@@ -77,11 +77,6 @@ export default {
     togglePassword() {
       this.isShow = !this.isShow;
     },
-    // register() {
-    //   console.log("this.fullName :>> ", this.fullName);
-    //   console.log("this.email :>> ", this.email);
-    //   console.log("this.password :>> ", this.password);
-    // },
     async register() {
       console.log("object :>> ", {
         email: this.email,
