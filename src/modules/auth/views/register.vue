@@ -64,6 +64,7 @@
 
 <script>
 import axios from "axios";
+import router from "@/router";
 export default {
   data() {
     return {
@@ -78,21 +79,24 @@ export default {
       this.isShow = !this.isShow;
     },
     async register() {
-      console.log("object :>> ", {
-        email: this.email,
-        password: this.password,
-        timezone: new Date(),
-        name: this.fullName,
-      });
-      const { data } = await axios
+      await axios
         .post("https://sohead-api-dev.socialhead.dev/api/app/sign-up", {
           email: this.email,
           password: this.password,
           timezone: new Date(),
           name: this.fullName,
         })
-        .then(({ data }) => data);
-      console.log("data :>> ", data.token);
+        .then((data) => {
+          if (data.status === 200) {
+            alert(
+              "Congratulations, your account has been successfully created. Go to Login now!"
+            );
+            router.push({ name: "Login" });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
 };

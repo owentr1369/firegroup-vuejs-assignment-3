@@ -86,7 +86,6 @@ export default {
         })
         .then(({ data }) => data)
         .catch((err) => {
-          console.log();
           if (err.response.status === 422) {
             return alert("Email address or password incorrect!");
           }

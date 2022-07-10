@@ -11,5 +11,3 @@ export default async function ({ next, to }) {
   }
   return true;
 }
-
-console.log('getCookie("userToken") :>> ', getCookie("userToken"));
