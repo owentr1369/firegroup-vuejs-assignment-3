@@ -59,7 +59,7 @@
 <script>
 import ProductsTable from "@/components/products-table.vue";
 export default {
-  // name: "Products",
+  name: "Products",
   components: { ProductsTable },
 };
 </script>
@@ -69,29 +69,29 @@ export default {
 
 .products {
   width: 100%;
-  background: #f7f8fa;
+  background: $product-background;
   &_head {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin-bottom: 25px;
 
     &-title {
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
-      color: #252627;
+      color: $dark-text;
     }
 
     &-btn {
+      padding: 14.5px 12px;
+      border: none;
+      border-radius: 4px;
       font-weight: 600;
       font-size: 14px;
       line-height: 16px;
       color: #ffffff;
       background: $main-color;
-      padding: 14.5px 12px;
-      border: none;
-      border-radius: 4px;
       cursor: pointer;
 
       img {
@@ -106,38 +106,34 @@ export default {
     align-items: center;
     padding-bottom: 26px;
     .searchbar {
-      width: 36%;
       display: flex;
       align-items: center;
-      border: 1px solid #e5e8ef;
+      width: 36%;
+      border: 1px solid $table-border;
       border-radius: 4px;
       overflow: hidden;
       background: #fff;
 
       &_icon {
-        margin-top: 9px;
-        margin-bottom: 9px;
-        margin-left: 12px;
-        margin-right: 12px;
+        margin: 9px 12px;
       }
       input {
         width: 100%;
-        outline: none;
-        border: none;
         padding-top: 12px;
         padding-bottom: 12px;
+        outline: none;
+        border: none;
       }
     }
     .filters {
       display: flex;
       border-radius: 4px;
-      border: 1px solid #e5e8ef;
+      border: 1px solid $table-border;
       overflow: hidden;
       background: #fff;
       &_item {
         position: relative;
-        border-right: 1px solid #e5e8ef;
-
+        border-right: 1px solid $table-border;
         &:last-child {
           border: none;
         }
@@ -145,10 +141,7 @@ export default {
           outline: none;
           border: none;
           appearance: none;
-          padding-top: 12px;
-          padding-bottom: 12px;
-          padding-left: 14px;
-          padding-right: 27px;
+          padding: 12px 27px 12px 14px;
           background: transparent;
           cursor: pointer;
           z-index: 2;
@@ -167,7 +160,7 @@ export default {
     }
     .sort {
       position: relative;
-      border: 1px solid #e5e8ef;
+      border: 1px solid $table-border;
       border-radius: 4px;
       background: #fff;
       z-index: 2;

@@ -601,41 +601,41 @@ export default {};
   width: 100%;
   overflow: auto;
   table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid $table-border;
     overflow-y: auto;
     background: #fff;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #e5e8ef;
     thead {
       height: 80px;
       width: inherit;
       tr {
-        border-bottom: 1px solid #e5e8ef;
+        border-bottom: 1px solid $table-border;
         th {
-          text-align: left;
           padding-top: 32px;
           padding-bottom: 28px;
+          text-align: left;
           font-weight: 600;
           font-size: 14px;
           line-height: 16px;
-          color: #828282;
+          color: $gray-text;
           &.th-checkbox {
             padding-left: 25px;
             input[type="checkbox"] {
-              appearance: none;
               position: relative;
-              margin-right: 10px;
-              width: 16px;
               height: 16px;
+              width: 16px;
+              margin-right: 10px;
+              appearance: none;
               &::before {
-                content: "";
                 position: absolute;
-                width: 16px;
-                height: 19px;
-                outline: 1px solid #828282;
-                border-radius: $border-radius;
+                content: "";
                 top: 50%;
                 left: 50%;
+                width: 16px;
+                height: 19px;
+                outline: 1px solid $gray-text;
+                border-radius: $border-radius;
                 transform: translate(-50%, -50%);
                 background: #fff;
               }
@@ -646,15 +646,15 @@ export default {};
                   background: $main-color;
                 }
                 &:after {
-                  content: "";
                   position: absolute;
+                  content: "";
+                  top: 8%;
+                  left: 29%;
+                  transform: rotate(45deg);
                   width: 4px;
                   height: 8px;
                   border-right: 3px solid #fff;
                   border-bottom: 3px solid #fff;
-                  top: 8%;
-                  left: 29%;
-                  transform: rotate(45deg);
                 }
               }
             }
@@ -694,33 +694,33 @@ export default {};
     tbody {
       margin-top: 80px;
       tr {
-        border-bottom: 1px solid #e5e8ef;
+        border-bottom: 1px solid $table-border;
         &:first-child {
           padding-top: 80px;
         }
         &:hover {
-          background: #f7f8fa;
+          background: $product-background;
           cursor: pointer;
         }
         td {
           padding-top: 20px;
           padding-bottom: 20px;
           input[type="checkbox"] {
-            appearance: none;
-            position: relative;
-            margin-right: 10px;
             width: 16px;
             height: 16px;
+            margin-right: 10px;
+            appearance: none;
+            position: relative;
             &::before {
-              content: "";
               position: absolute;
+              content: "";
               width: 16px;
               height: 16px;
-              outline: 1px solid #828282;
-              border-radius: $border-radius;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
+              outline: 1px solid $gray-text;
+              border-radius: $border-radius;
               background: #fff;
             }
 
@@ -730,15 +730,15 @@ export default {};
                 background: $main-color;
               }
               &:after {
-                content: "";
                 position: absolute;
+                content: "";
                 width: 4px;
                 height: 8px;
-                border-right: 3px solid #fff;
-                border-bottom: 3px solid #fff;
                 top: 8%;
                 left: 29%;
                 transform: rotate(45deg);
+                border-right: 3px solid #fff;
+                border-bottom: 3px solid #fff;
               }
             }
           }
@@ -757,7 +757,7 @@ export default {};
               font-weight: 400;
               font-size: 14px;
               line-height: 18px;
-              color: #252627;
+              color: $dark-text;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -766,7 +766,7 @@ export default {};
               font-weight: 400;
               font-size: 12px;
               line-height: 15px;
-              color: #828282;
+              color: $gray-text;
             }
           }
           &.td-shopify {
@@ -790,16 +790,16 @@ export default {};
               font-weight: 400;
               font-size: 14px;
               line-height: 18px;
-              color: #828282;
+              color: $gray-text;
 
               strong {
-                color: #252627;
+                color: $dark-text;
                 font-weight: 400;
               }
             }
           }
           &.td-options {
-            color: #828282;
+            color: $gray-text;
           }
           &.td-profile {
             padding-right: 13px;
@@ -807,23 +807,20 @@ export default {};
             div {
               position: relative;
               select {
-                outline: none;
-                border: 1px solid #e5e8ef;
+                padding: 8px 25px 7px 9px;
+                border: 1px solid $table-border;
                 border-radius: 4px;
+                outline: none;
                 appearance: none;
-                padding-top: 8px;
-                padding-bottom: 7px;
-                padding-left: 9px;
-                padding-right: 25px;
                 background: transparent;
-                z-index: 2;
                 cursor: pointer;
                 background: #fff;
+                z-index: 2;
               }
               img {
                 position: absolute;
-                right: 11px;
                 top: 52%;
+                right: 11px;
                 transform: translateY(-50%);
                 z-index: 0;
               }
@@ -835,13 +832,10 @@ export default {};
               position: relative;
               select {
                 outline: none;
-                border: 1px solid #e5e8ef;
+                padding: 8px 23px 7px 9px;
+                border: 1px solid $table-border;
                 border-radius: 4px;
                 appearance: none;
-                padding-top: 8px;
-                padding-bottom: 7px;
-                padding-left: 9px;
-                padding-right: 23px;
                 background: transparent;
                 z-index: 2;
                 cursor: pointer;
@@ -849,8 +843,8 @@ export default {};
               }
               img {
                 position: absolute;
-                right: 11px;
                 top: 52%;
+                right: 11px;
                 transform: translateY(-50%);
                 z-index: 0;
               }
@@ -875,7 +869,7 @@ export default {};
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  border: 1px solid#e5e8ef;
+                  border: 1px solid$table-border;
                   padding: 8px 14px;
                 }
               }

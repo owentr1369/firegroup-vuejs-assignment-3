@@ -77,15 +77,15 @@ export default {
         height: 32px;
       }
       .logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         width: 100px;
         height: 46px;
         top: 30px;
         left: -55px;
         background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: 1px solid #ebebf0;
         box-shadow: 0px 8px 12px rgba(61, 90, 153, 0.15);
         border-radius: 6px;

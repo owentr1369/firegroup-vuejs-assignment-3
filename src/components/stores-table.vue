@@ -127,10 +127,10 @@ export default {
     border-collapse: collapse;
     border-radius: 3px;
     overflow: hidden;
-    border: 1px solid #e5e8ef;
+    border: 1px solid $table-border;
     thead {
       tr {
-        border-bottom: 1px solid #e5e8ef;
+        border-bottom: 1px solid $table-border;
         th {
           font-weight: 500;
           font-size: 14px;
@@ -146,9 +146,9 @@ export default {
     }
     tbody {
       tr {
-        border-bottom: 1px solid #e5e8ef;
+        border-bottom: 1px solid $table-border;
         &:hover {
-          background: #f7f8fa;
+          background: $product-background;
           cursor: pointer;
         }
         td {
@@ -209,7 +209,7 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid#e5e8ef;
+                border: 1px solid$table-border;
                 padding: 8px 21px;
                 border-radius: 4px;
                 background: #fff;

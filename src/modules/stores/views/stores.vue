@@ -26,12 +26,12 @@ export default {
 
 .stores {
   width: 100%;
-  background: #f7f8fa;
+  background: $product-background;
   min-height: calc(100vh - 51px);
   &_head {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin-bottom: 25px;
 
     &-title {
@@ -42,14 +42,14 @@ export default {
     }
 
     &-btn {
+      padding: 14.5px 12px;
+      border: none;
+      border-radius: 4px;
       font-weight: 600;
       font-size: 14px;
       line-height: 16px;
       color: #ffffff;
       background: $main-color;
-      padding: 14.5px 12px;
-      border: none;
-      border-radius: 4px;
       cursor: pointer;
       img {
         margin-right: 8px;

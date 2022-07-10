@@ -4,7 +4,6 @@ import { getCookie } from "@/plugins/cookie";
 
 export default async function ({ next, to }) {
   let tokenExist = !!getCookie("userToken");
-  console.log("tokenExist :>> ", tokenExist);
   if (!tokenExist) {
     next({ name: "Login" });
     return false;

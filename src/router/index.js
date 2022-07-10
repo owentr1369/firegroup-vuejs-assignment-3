@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Auth from "@/middlewares/auth";
-// import OnBoard from "@/middlewares/onboard";
 Vue.use(VueRouter);
 
 const routes = [
@@ -65,9 +64,6 @@ const routes = [
   {
     path: "/forgot-password",
     name: "Forgot Password",
-    // meta: {
-    //   middleware: [Auth, OnBoard],
-    // },
     component: () =>
       import(/* webpackChunkName: "auth" */ "@/layouts/forgot.vue"),
   },
@@ -76,19 +72,15 @@ const routes = [
     path: "/auth",
     name: "Auth",
     meta: {
-      // middleware: [Auth, OnBoard],
       layout: "auth",
     },
     component: () =>
       import(/* webpackChunkName: "auth" */ "@/layouts/auth.vue"),
-
     children: [
       {
         path: "login",
         name: "Login",
-        meta: {
-          // middleware: [Auth, OnBoard],
-        },
+        meta: {},
         component: () =>
           import(
             /* webpackChunkName: "auth" */ "@/modules/auth/views/login.vue"

@@ -45,12 +45,12 @@ export default {};
 <style lang="scss" scoped>
 @import "@/styles/scss/index.scss";
 .sidebar {
-  width: 230px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #f7f8fa;
+  width: 230px;
+  height: 100vh;
+  background: $product-background;
   border-right: 1px solid #e2e2e2;
   &-top {
     width: 100%;
@@ -64,21 +64,16 @@ export default {};
       display: block;
       width: 100%;
       &_item {
+        position: relative;
         display: flex;
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 15px;
         text-decoration: none;
-        position: relative;
         transition: all 0.1s ease-in;
         &-icon {
           margin-right: 12px;
-          // svg {
-          //   // .path {
-          //   //   fill: ;
-          //   // }
-          // }
         }
         &-text {
           font-weight: 400;
@@ -96,9 +91,9 @@ export default {};
             color: $main-color;
           }
           &::after {
+            position: absolute;
             content: "";
             background: $main-color;
-            position: absolute;
             width: 4px;
             height: 40px;
             border-radius: 0 6px 6px 0;

@@ -22,11 +22,11 @@ export default {
 </script>
 <style lang="scss">
 .auth {
-  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   min-height: 100vh;
   background: #f6f8ff;
   .logo {
@@ -38,11 +38,10 @@ export default {
     margin-left: 18%;
   }
   .artwork {
-    width: 34%;
-    min-height: 100vh;
     display: flex;
     align-items: center;
-
+    width: 34%;
+    min-height: 100vh;
     background: linear-gradient(
         181.62deg,
         rgba(255, 255, 255, 0.56) 12.9%,

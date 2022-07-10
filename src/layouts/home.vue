@@ -20,9 +20,9 @@ export default {
 
 <style lang="scss">
 .home {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   .body {
     width: calc(100% - 230px);
     .content {
