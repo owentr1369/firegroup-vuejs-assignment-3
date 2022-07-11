@@ -64,6 +64,7 @@
 <script>
 import axios from "axios";
 import router from "@/router";
+
 export default {
   data() {
     return {
@@ -93,6 +94,7 @@ export default {
 
       let now = new Date();
       now.setDate(now.getDate() + 1);
+      // Expired after 24h
       document.cookie = `userToken=${
         data.token
       }; expires= ${now.toUTCString()}`;

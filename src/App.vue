@@ -11,6 +11,7 @@ export default {
   name: "App",
   components: { VueExtendLayouts },
   mounted() {
+    // fetchUser from Api
     this.$store.dispatch("fetchUser");
   },
 };

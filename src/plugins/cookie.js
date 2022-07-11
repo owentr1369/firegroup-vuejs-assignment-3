@@ -1,3 +1,5 @@
+// Get cookie by name
+
 export const getCookie = (name) => {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
