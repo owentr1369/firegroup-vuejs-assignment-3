@@ -1,6 +1,7 @@
 import axios from "axios";
 import Vue from "vue";
 import Vuex from "vuex";
+import { getCookie } from "@/plugins/cookie";
 
 Vue.use(Vuex);
 
@@ -19,10 +20,14 @@ export default new Vuex.Store({
   actions: {
     async fetchUser({ commit }) {
       try {
-        const data = await axios.get(
+        axios.defaults.headers.common["Authorization"] = `${getCookie(
+          "userToken"
+        )}`;
+        const res = await axios.get(
           "https://sohead-api-dev.socialhead.dev/api/app/user"
         );
-        commit("SET_USER", data.data);
+        commit("SET_USER", res.data);
+        console.log("user Data :>> ", res.data.data);
       } catch (error) {
         console.log(error);
       }
