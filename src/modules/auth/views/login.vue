@@ -99,6 +99,7 @@ export default {
         data.token
       }; expires= ${now.toUTCString()}`;
 
+      this.$store.dispatch("fetchUser");
       router.push("/products");
     },
   },

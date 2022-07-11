@@ -14,6 +14,7 @@ export default {
     // fetchUser from Api
     this.$store.dispatch("fetchUser");
   },
+  created() {},
 };
 </script>
 
